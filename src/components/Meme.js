@@ -1,10 +1,8 @@
 import './Meme.css';
 import React, { useState, useEffect } from 'react';
-// import memesData from '../memesData';
 
 
 function Meme() {
-    // const [memeImage, setmemeImage] = useState("");
 
     const [meme, setmeme] = useState({
         topText: "",
@@ -31,20 +29,11 @@ function Meme() {
             }
         })
     }
-    // function getInput(event) {
-    //     setmeme(prev => {
-    //         return {
-    //             ...prev,
-    //             [event.target.name]: event.target.value,
-    //         }
-    //     })
-    // }
+
 
     function getMemeImage(event) {
         event.preventDefault();
-        // const memesArray = allMemes;
         const randomNumber = Math.floor(Math.random() * allMemes.length);
-        // memeImage = memesArray[randomNumber].url;
         setmeme((prevMeme) => {
             return {
                 ...prevMeme,
